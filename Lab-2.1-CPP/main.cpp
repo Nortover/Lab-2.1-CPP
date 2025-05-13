@@ -8,24 +8,24 @@ int main() {
 
     std::locale::global(std::locale(""));
 
-    // Демонстрація роботи з базовим класом
-    std::cout << "Робота з базовим класом StringBase:" << std::endl;
-    StringBase baseString("Рядок вписаний хардкодом");
-    std::cout << "Рядок: " << baseString.getValue() << std::endl;
-    std::cout << "Довжина рядка: " << baseString.calculateLength() << std::endl;
+    // Г„ГҐГ¬Г®Г­Г±ГІГ°Г Г¶ВіГї Г°Г®ГЎГ®ГІГЁ Г§ ГЎГ Г§Г®ГўГЁГ¬ ГЄГ«Г Г±Г®Г¬
+    std::cout << "ГђГ®ГЎГ®ГІГ  Г§ ГЎГ Г§Г®ГўГЁГ¬ ГЄГ«Г Г±Г®Г¬ StringBase:" << std::endl;
+    StringBase baseString("ГђГїГ¤Г®ГЄ ГўГЇГЁГ±Г Г­ГЁГ© ГµГ Г°Г¤ГЄГ®Г¤Г®Г¬");
+    std::cout << "ГђГїГ¤Г®ГЄ: " << baseString.getValue() << std::endl;
+    std::cout << "Г„Г®ГўГ¦ГЁГ­Г  Г°ГїГ¤ГЄГ : " << baseString.calculateLength() << std::endl;
 
     std::cout << "\n----------------------------------\n" << std::endl;
 
-    // Демонстрація роботи з похідним класом
-    std::cout << "Робота з похідним класом NumericString:" << std::endl;
+    // Г„ГҐГ¬Г®Г­Г±ГІГ°Г Г¶ВіГї Г°Г®ГЎГ®ГІГЁ Г§ ГЇГ®ГµВіГ¤Г­ГЁГ¬ ГЄГ«Г Г±Г®Г¬
+    std::cout << "ГђГ®ГЎГ®ГІГ  Г§ ГЇГ®ГµВіГ¤Г­ГЁГ¬ ГЄГ«Г Г±Г®Г¬ StringPlus:" << std::endl;
     StringPlus plString("123-456-789");
-    std::cout << "Початковий рядок: " << plString.getValue() << std::endl;
-    std::cout << "Довжина рядка: " << plString.calculateLength() << std::endl;
+    std::cout << "ГЏГ®Г·Г ГІГЄГ®ГўГЁГ© Г°ГїГ¤Г®ГЄ: " << plString.getValue() << std::endl;
+    std::cout << "Г„Г®ГўГ¦ГЁГ­Г  Г°ГїГ¤ГЄГ : " << plString.calculateLength() << std::endl;
 
-    // Видаляємо дефіси
+    // Г‚ГЁГ¤Г Г«ГїВєГ¬Г® Г¤ГҐГґВіГ±ГЁ
     plString.removeCharacter('-');
-    std::cout << "Рядок після видалення '-': " << plString.getValue() << std::endl;
-    std::cout << "Довжина рядка після змін: " << plString.calculateLength() << std::endl;
+    std::cout << "ГђГїГ¤Г®ГЄ ГЇВіГ±Г«Гї ГўГЁГ¤Г Г«ГҐГ­Г­Гї '-': " << plString.getValue() << std::endl;
+    std::cout << "Г„Г®ГўГ¦ГЁГ­Г  Г°ГїГ¤ГЄГ  ГЇВіГ±Г«Гї Г§Г¬ВіГ­: " << plString.calculateLength() << std::endl;
 
     return 0;
 }
